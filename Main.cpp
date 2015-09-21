@@ -1,4 +1,4 @@
 #include <cstdio>
 int main(){
-	printf("ltz is really a fish!!!!");
+	printf("csz is really a fish!!!!");
 }
