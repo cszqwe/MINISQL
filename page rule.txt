@@ -1,0 +1,7 @@
+page(8kb):
+	front page(96 byte):
+		page owner: 8byte
+		page left size: 8byte
+		page type: 8byte
+		
+		
