@@ -7,7 +7,7 @@ IndexManager indexManager;
 class SavePlace{
 public:
 	int page;
-	int offset;
+	bool first;
 };
 class Error{
 public:
@@ -28,14 +28,18 @@ public:
 
 class OpType{
 public:
-	int ope;//表示判断符
+	int ope;//表示判断符 1.< 2.> 3.<= 4.>= 5.== 6.!=
+	int attrType;//该属性的类型 1.int 2.float 3.char*
 	string attrName;
+	int attrPos;//该属性是这个table的第几个属性
 	string value;
 	OpType(){}
-	OpType(int ope, string attrName, string value){
+	OpType(int ope, string attrName, int attrPos,string value,int attrType){
 		this->ope = ope;
 		this->attrName = attrName;
 		this->value = value;
+		this->attrPos = attrPos;
+		this->attrType = attrType;
 	}
 };
 
@@ -89,13 +93,17 @@ public:
 			this->attr[i] = attr[i];
 	}
 	Error Execute(){
-		SavePlace place;
+		int place;
 		AttrSaver index,attrGet;
 		Error re;
-		int page,PKplace;
+		SavePlace p;
+		int page,PKplace,PKType;
 		page=catalogManager.GetTablePage(tableName);//返回保存table中data起始位置的page
 		PKplace = catalogManager.GetPKnum(tableName);//返回table中PK的位置，若无则为-1
-		place=dataManager.InsertData(page,PKplace, attrNum, attr);//按pk顺序插入到data中，返回插入的page，从而让index连接
+		PKType = catalogManager.GetType(PKplace);//获取第place个属性的类型
+		p=dataManager.InsertData(page,PKplace, PKType,attrNum, attr);//按pk顺序插入到data中，返回插入的page，从而让index连接
+		if (p.first) catalogManager.ChangeFirstPage(tableName, p.page);//将tablename的数据首页改为page
+		p.page = place;
 		index = catalogManager.GetIndexName(tableName);//返回所有tableName中的indexAttrname
 		attrGet= catalogManager.GetAttrName(tableName);//返回所有tableName中的Attribute
 		for (int i = 0; i < index.attrNum; i++)//将所有的index维护
@@ -153,7 +161,7 @@ public:
 		int page;
 		AttrSaver index;
 		page = catalogManager.GetTablePage(tableName);//返回保存table中data起始位置的page
-		dataManager.DeleteTable(page);//删除table中所有data
+		dataManager.DeleteData(page);//删除table中所有data
 		index = catalogManager.GetIndexName(tableName);//返回所有tableName中的indexname
 		for (int i = 0; i < index.attrNum; i++)
 		{

@@ -3,20 +3,27 @@
 
 #include<string>
 using namespace std;
-
+class SavePlace{
+public:
+	int page;
+	bool first;
+};
 class Error{
 public:
 	bool isSucc;
 	string errorReason;
+	Error(){}
 	Error(bool flag, string eR){}
 };
 
 class OpType{
 public:
 	int ope;
+	int attrType;
 	string attrName;
+	int attrPos;
 	string value;
-	OpType(int ope, string attrName, string value){}
+	OpType(int ope, string attrName,int attrPos, string value,int attrType){}
 
 };
 class  OrderType{

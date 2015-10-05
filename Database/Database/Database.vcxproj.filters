@@ -29,5 +29,8 @@
     <ClCompile Include="API.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="DataManager.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
