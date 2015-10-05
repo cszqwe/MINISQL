@@ -2,9 +2,16 @@
 #include <cstring>
 #include "BufferManager.h"
 using namespace std;
+/* 
+Function: LOG
+Type: VOID
+Argus: (string message)
+Description: LOG the error Message
+*/
 void LOG(string message){
 	cout << "error " << message << endl;
 }
+
 BufferManager::BufferManager (const string& name){
 	this->fileName = name;
 	if (openFile(name) == 1){
@@ -17,7 +24,12 @@ string BufferManager::getFileName(){
 }
 int BufferManager::openFile(const string& name){
 	file = fopen(name.c_str(),"r+");
-	if (file == NULL) return 1; else return 0;
+	if (file == NULL) return 1; else{
+		fseek(file, 0, SEEK_END);
+		pageSize = (ftell(file) / PAGE_SIZE);
+		fseek(file, 0, SEEK_SET);
+		return 0;
+	}
 }
 int BufferManager::readPage(int pageID){
 	if (file == NULL){
@@ -35,9 +47,45 @@ int BufferManager::readPage(int pageID){
 		return 0;
 	}
 }
-
-
-
+page* BufferManager::findPage(int pageID){
+	map<int,page>::iterator it = pages.find(pageID);
+	if (it != pages.end()){
+		return &it->second;
+	}else{
+		if (!readPage(pageID)){
+			it = pages.find(pageID);
+			return &it->second;
+		}else{
+			return NULL;
+		}
+	}
+}
+int BufferManager::writePage(int pageID){
+	if (pageID > pageSize) return FAIL;
+	map<int,page>::iterator it = pages.find(pageID);
+	page* changedPage = &it->second;
+	fseek(file, pageID*PAGE_SIZE , SEEK_SET);
+	int bytesw = (int)fwrite(&(changedPage->content.content),sizeof(changedPage->content.content),1,file);
+	return SUCCESS;
+}
+int BufferManager::updatePage(int pageID,string newContent){
+	map<int,page>::iterator it = pages.find(pageID);
+	if (it == pages.end()) return FAIL;
+	page* changedPage = &it->second;
+	for (int i = 0; i < newContent.length(); i++){
+		changedPage->content.content[i] = newContent[i];
+	}
+	changedPage->isModified = true;
+	return SUCCESS;
+}
+int BufferManager::newPage(){
+	fseek(file, 0 ,SEEK_END);
+	frame newFrame;
+	memset(newFrame.content,0,sizeof(newFrame.content));
+	fwrite(&(newFrame),sizeof(newFrame),0,file);
+	pageSize++;
+	return pageSize;
+}
 
 int main(){
 	cout << "Hello World";
