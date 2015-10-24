@@ -1,76 +1,45 @@
 #include<string>
 #include"DataManager.h"
 #include"IndexManager.h"
+#include"API.h"
 using namespace std;
 DataManager dataManager;
 IndexManager indexManager;
-class SavePlace{
-public:
-	int page;
-	bool first;
-};
-class Error{
-public:
-	bool isSucc;
-	string errorReason;
-	Error(){}
-	Error(bool flag, string eR){
+
+Error::Error(){}
+Error::Error(bool flag, string eR){
 		isSucc = flag;
 		errorReason = eR;
-	}
-};
-class AttrSaver{
-public:
-	int attrNum;
-	string attrName[32];
-	int attrType[32];
-};
+}
 
-class OpType{
-public:
-	int ope;//表示判断符 1.< 2.> 3.<= 4.>= 5.== 6.!=
-	int attrType;//该属性的类型 1.int 2.float 3.char*
-	string attrName;
-	int attrPos;//该属性是这个table的第几个属性
-	string value;
-	OpType(){}
-	OpType(int ope, string attrName, int attrPos,string value,int attrType){
+
+
+OpType::OpType(){}
+OpType::OpType(int ope, string attrName, int attrPos, string value, int attrType){
 		this->ope = ope;
 		this->attrName = attrName;
 		this->value = value;
 		this->attrPos = attrPos;
 		this->attrType = attrType;
 	}
-};
 
-class  OrderType{
-public:
-	OrderType(){}
-	virtual Error Execute();
-	virtual ~OrderType(){}
-};
 
-class Select :OrderType{
-private:
-	string tableName;
-	int opNum;
-	OpType op[100];
-public:
-	Select(string tableName, int opNum, OpType *op){
+
+	Select::Select(string tableName, int opNum, OpType *op){
 		this->tableName = tableName;
 		this->opNum = opNum;
 		for (int i = 0; i < opNum; i++)
 			this->op[i] = op[i];
 	}
-	Error Execute(){
+	Error Select::Execute(){
 		Error re;
 		bool flag = 1;
 		int page,attrType;
 
-		if ((opNum == 1) && (page=catalogManager.FindIndexPlace(tableName, op[0].attrName)))
+		if ((opNum == 1) && (op[0].ope!=5)&&(op[0].ope!=6)&&(page=catalogManager.FindIndexPlace(tableName, op[0].attrName)))
 		{
 			attrType = catalogManager.AttrType(tableName, op[0].attrName);//返回table中attr的类型
-			re = indexManager.Find(page, op, attrType);//在index中进行查找操作
+			re = indexManager.Find(page,op[0]);//在index中进行查找操作
 		}
 		else{
 			page = catalogManager.GetTablePage(tableName);//返回保存table中data起始位置的page
@@ -79,20 +48,13 @@ public:
 
 		return re;
 	}
-};
-class Insert :OrderType{
-private:
-	string tableName;
-	int attrNum;
-	string attr[32];
-public:
-	Insert(string tableName, int attrNum, string* attr){
+	Insert::Insert(string tableName, int attrNum, string* attr){
 		this->tableName = tableName;
 		this->attrNum = attrNum;
 		for (int i = 0; i < attrNum; i++)
 			this->attr[i] = attr[i];
 	}
-	Error Execute(){
+	Error Insert::Execute(){
 		int place;
 		AttrSaver index,attrGet;
 		Error re;
@@ -100,7 +62,7 @@ public:
 		int page,PKplace,PKType;
 		page=catalogManager.GetTablePage(tableName);//返回保存table中data起始位置的page
 		PKplace = catalogManager.GetPKnum(tableName);//返回table中PK的位置，若无则为-1
-		PKType = catalogManager.GetType(PKplace);//获取第place个属性的类型
+		PKType = catalogManager.GetType(tableName,PKplace);//获取第place个属性的类型
 		p=dataManager.InsertData(page,PKplace, PKType,attrNum, attr);//按pk顺序插入到data中，返回插入的page，从而让index连接
 		if (p.first) catalogManager.ChangeFirstPage(tableName, p.page);//将tablename的数据首页改为page
 		p.page = place;
@@ -109,20 +71,13 @@ public:
 		for (int i = 0; i < index.attrNum; i++)//将所有的index维护
 			for (int j = 0; j < attrGet.attrNum; i++)
 				if (index.attrName[i] == attrGet.attrName[j])
-					indexManager.Insert(tableName, catalogManager.FindIndexPlace(tableName,index.attrName[i]), attr[j], place);//找到index的位置并执行插入操作
+					indexManager.Insert(catalogManager.FindIndexPlace(tableName,index.attrName[i]), attr[j], place);//找到index的位置并执行插入操作
 		re.isSucc = 1;
 		re.errorReason = "Insert success!";
 		return re;
 	}
-};
-class CreatTable :OrderType{	
-private:
-	string tableName;
-	int attrNum;
-	string attrName[32];
-	int attrType[32];
-public:
-	CreatTable(string tableName, int attrNum, string *attrName, int* attrType){
+
+	CreatTable::CreatTable(string tableName, int attrNum, string *attrName, int* attrType){
 		this->tableName = tableName;
 		this->attrNum = attrNum;
 		for (int i = 0; i < attrNum; i++)
@@ -131,7 +86,7 @@ public:
 			this->attrType[i] = attrType[i];
 		}
 	}
-	Error Execute(){
+	Error CreatTable::Execute(){
 		Error re;
 		AttrSaver index;
 		catalogManager.NewTable(tableName, attrNum, attrName, attrType);//新建一个table的属性
@@ -139,7 +94,7 @@ public:
 		for (int i = 0; i < index.attrNum; i++)
 		{
 
-			indexManager.NewIndex(catalogManager.FindIndexPlace(tableName,index.attrName[i]));//在page中建立新的index
+			indexManager.NewIndex(catalogManager.FindIndexPlace(tableName, index.attrName[i]), catalogManager.ReturnType(tableName, attrName));//在page中建立新的index
 		//	int p;
 	//		p=indexManager.NewIndex(index.attrName[i]);//新建index，返回页数
 	//		catalogManager.IndexPlace(index.attrName[i], p);//将新建的index位置返回给catalog保存	
@@ -148,15 +103,10 @@ public:
 		re.errorReason = "Creat table success!";
 		return re;
 	}
-};
-class DropTable :OrderType{
-private:
-	string tableName;
-public:
-	DropTable(string tableName){
+	DropTable::DropTable(string tableName){
 		this->tableName = tableName;
 	}
-	Error Execute(){
+	Error DropTable::Execute(){
 		Error re;
 		int page;
 		AttrSaver index;
@@ -165,43 +115,32 @@ public:
 		index = catalogManager.GetIndexName(tableName);//返回所有tableName中的indexname
 		for (int i = 0; i < index.attrNum; i++)
 		{
-			indexManager.DeleteIndex(catalogManager.FindIndexPlace(tableName,index.attrName[i]));//删除table中所有index
+			indexManager.DeleteIndex(catalogManager.FindIndexPlace(tableName, index.attrName[i]));//删除table中所有index
 		}
 		catalogManager.DeleteTable(tableName);//删除catalog中存留的table信息
 		re.isSucc = 1;
 		re.errorReason = "Drop table success!";
 		return re;
 	}
-};
-class CreatIndex :OrderType{
-private:
-	string tableName;
-	string indexName;
-	string attrName;
-public:
-	CreatIndex(string indexName, string tableName, string attrName){
+
+	CreatIndex::CreatIndex(string indexName, string tableName, string attrName){
 		this->tableName = indexName;
 		this->indexName = tableName;
 		this->attrName = attrName;
 	}
-	Error Execute(){
+	Error CreatIndex::Execute(){
 		Error re;
 		int page;
 		page = catalogManager.NewIndex(tableName, attrName, indexName);//新建index的page
-		indexManager.NewIndex(page);//在page中建立新的index
+		indexManager.NewIndex(page,catalogManager.ReturnType(tableName,attrName));//在page中建立新的index,ReturnType为提取table中根据attr名提取attr的type
 		re.isSucc = 1;
 		re.errorReason = "Creat Index success";
 		return re;
 	}
-};
-class DropIndex :OrderType{
-private:
-	string indexName;
-public:
-	DropIndex(string indexName){
+	DropIndex::DropIndex(string indexName){
 		this->indexName = indexName;
 	}
-	Error Execute(){
+	Error DropIndex::Execute(){
 		Error re;
 		int page;
 		page=catalogManager.FindIndex(indexName);//根据indexname寻找index的page
@@ -211,23 +150,17 @@ public:
 		re.errorReason = "Drop Index success!";
 		return re;
 	}
-};
-class Delete : OrderType{
-private:
-	string tableName;
-	bool haveOp;
-	OpType op;
-public:
-	Delete(string tableName, OpType op){
+
+	Delete::Delete(string tableName, OpType op){
 		this->tableName = tableName;
 		haveOp = true;
 		this->op = op;
 	}
-	Delete(string tableName){
+	Delete::Delete(string tableName){
 		this->tableName = tableName;
 		haveOp = false;
 	}
-	Error Execute(){
+	Error Delete::Execute(){
 		Error re;
 		AttrSaver index;
 		int numbers, page;
@@ -242,5 +175,4 @@ public:
 		re.errorReason = "Delete Data success!"+numbers;
 		return re;
 	}
-};
 //注意 FindIndexPlace参数为attributename 而FindIndex为indexname

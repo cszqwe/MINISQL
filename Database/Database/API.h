@@ -15,14 +15,20 @@ public:
 	Error(){}
 	Error(bool flag, string eR){}
 };
-
+class AttrSaver{
+public:
+	int attrNum;
+	string attrName[32];
+	int attrType[32];
+};
 class OpType{
 public:
-	int ope;
-	int attrType;
+	int ope;//表示判断符 1.< 2.> 3.<= 4.>= 5.== 6.!=
+	int attrType;//该属性的类型 1.int 2.float 3.char* 加10表示PK
 	string attrName;
-	int attrPos;
+	int attrPos;//该属性是这个table的第几个属性
 	string value;
+	OpType();
 	OpType(int ope, string attrName,int attrPos, string value,int attrType){}
 
 };

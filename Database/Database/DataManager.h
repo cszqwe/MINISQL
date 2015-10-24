@@ -3,9 +3,8 @@
 #include<sstream>
 #include<string>
 using namespace std;
+bool Compare(string a, string b, int comType, int attrType);
 class DataManager{
-private:
-	bool compare(string a, string b, int type){}
 public:
 	SavePlace InsertData(int page, int PKplace, int PKType,int attrNum, string*attr){}
 	int DeleteData(int page, OpType op){}

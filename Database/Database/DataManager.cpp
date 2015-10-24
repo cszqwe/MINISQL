@@ -1,92 +1,90 @@
 #include"API.h"
+#include"DataManager.h"
 #include<sstream>
 #include<string>
 #include<iostream>
 using namespace std;
-class DataManager{
-private:
-	bool Compare(string a, string b, int comType, int attrType){
-		stringstream stream1;
-		stringstream stream2;
-		stream1 << a;
-		stream2 << b;
-		if (attrType == 1) {
-			int a1, b1;
-			stream1 >> a1;
-			stream2 >> b1;
-			switch (comType){
-			case 1: if (a1 < b1) return true;
-					else return false;
-					break;
-			case 2:if (a1 > b1) return true;
-				   else return false;
-				   break;
-			case 3:if (a1 <= b1) return true;
-				   else return false;
-				   break;
-			case 4:if (a1 >= b1) return true;
-				   else return false;
-				   break;
-			case 5:if (a1== b1) return true;
-				   else return false;
-				   break;
-			case 6:if (a1 != b1) return true;
-				   else return false;
-				   break;
-			}
+bool Compare(string a, string b, int comType, int attrType){
+	stringstream stream1;
+	stringstream stream2;
+	stream1 << a;
+	stream2 << b;
+	if (attrType == 1) {
+		int a1, b1;
+		stream1 >> a1;
+		stream2 >> b1;
+		switch (comType){
+		case 1: if (a1 < b1) return true;
+				else return false;
+				break;
+		case 2:if (a1 > b1) return true;
+			   else return false;
+			   break;
+		case 3:if (a1 <= b1) return true;
+			   else return false;
+			   break;
+		case 4:if (a1 >= b1) return true;
+			   else return false;
+			   break;
+		case 5:if (a1 == b1) return true;
+			   else return false;
+			   break;
+		case 6:if (a1 != b1) return true;
+			   else return false;
+			   break;
 		}
-		if (attrType == 2){
-			double a1, b1;
-			stream1 >> a1;
-			stream2 >> b1;
-			switch (comType){
-			case 1: if (a1 < b1) return true;
-					else return false;
-					break;
-			case 2:if (a1 > b1) return true;
-				   else return false;
-				   break;
-			case 3:if (a1 <= b1) return true;
-				   else return false;
-				   break;
-			case 4:if (a1 >= b1) return true;
-				   else return false;
-				   break;
-			case 5:if (a1 == b1) return true;
-				   else return false;
-				   break;
-			case 6:if (a1 != b1) return true;
-				   else return false;
-				   break;
-			}
-		}
-		if (attrType == 3){
-			string a1 = a, b1 = b;
-			switch (comType){
-			case 1: if (a1 < b1) return true;
-					else return false;
-					break;
-			case 2:if (a1 > b1) return true;
-				   else return false;
-				   break;
-			case 3:if (a1 <= b1) return true;
-				   else return false;
-				   break;
-			case 4:if (a1 >= b1) return true;
-				   else return false;
-				   break;
-			case 5:if (a1 == b1) return true;
-				   else return false;
-				   break;
-			case 6:if (a1 != b1) return true;
-				   else return false;
-				   break;
-			}
-		}
-		return false;
 	}
-public:
-	SavePlace InsertData(int page, int PKplace, int PKType,int attrNum, string*attr){
+	if (attrType == 2){
+		double a1, b1;
+		stream1 >> a1;
+		stream2 >> b1;
+		switch (comType){
+		case 1: if (a1 < b1) return true;
+				else return false;
+				break;
+		case 2:if (a1 > b1) return true;
+			   else return false;
+			   break;
+		case 3:if (a1 <= b1) return true;
+			   else return false;
+			   break;
+		case 4:if (a1 >= b1) return true;
+			   else return false;
+			   break;
+		case 5:if (a1 == b1) return true;
+			   else return false;
+			   break;
+		case 6:if (a1 != b1) return true;
+			   else return false;
+			   break;
+		}
+	}
+	if (attrType == 3){
+		string a1 = a, b1 = b;
+		switch (comType){
+		case 1: if (a1 < b1) return true;
+				else return false;
+				break;
+		case 2:if (a1 > b1) return true;
+			   else return false;
+			   break;
+		case 3:if (a1 <= b1) return true;
+			   else return false;
+			   break;
+		case 4:if (a1 >= b1) return true;
+			   else return false;
+			   break;
+		case 5:if (a1 == b1) return true;
+			   else return false;
+			   break;
+		case 6:if (a1 != b1) return true;
+			   else return false;
+			   break;
+		}
+	}
+	return false;
+}
+	SavePlace DataManager::InsertData(int page, int PKplace, int PKType, int attrNum, string*attr){
 		SavePlace re;
 		if ((page==-1)||(PKplace == -1)){//放在文件头
 			stringstream stream;
@@ -149,7 +147,7 @@ public:
 
 		}
 	}
-	int DeleteData(int page, OpType op){
+	int DataManager::DeleteData(int page, OpType op){
 		string text;
 		int p = page;
 		int front, next;
@@ -196,7 +194,7 @@ public:
 			p = next;
 		}
 	}
-	int DeleteData(int page){
+	int DataManager::DeleteData(int page){
 		string text;
 		int p = page;
 		int front, next;
@@ -211,7 +209,7 @@ public:
 			p = next;
 		}
 	}
-	Error Select(int page, int opNum, OpType *op){
+	Error DataManager::Select(int page, int opNum, OpType *op){
 		Error re;
 		int p = page;
 		bool flag = true, f ;
@@ -251,5 +249,3 @@ public:
 		re.isSucc = true;
 		return re;
 	}
-
-};
