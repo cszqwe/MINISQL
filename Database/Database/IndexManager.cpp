@@ -5,6 +5,7 @@
 #include<string>
 #include<iostream>
 #include"IndexManager.h"
+#include "BufferManager.h"
 using namespace std;
 #define MAX 200
 	int IndexManager::IndexFind(int page, string value){
