@@ -48,7 +48,7 @@ using namespace std;
 		string value, temp;
 		int nextPage,firstPage;
 		text = bufferManager.GetText(page);
-		int firstLeaf, isLeaf, attrType, faPage, num, nextPage;
+		int firstLeaf, isLeaf, attrType, faPage, num;
 		stream << text;
 		stream >> isLeaf >> attrType >> faPage >> num>>firstPage;
 
@@ -107,7 +107,7 @@ using namespace std;
 						ChangeFather(childPage, newPage);
 						if (flag){
 							attribute = values[i];
-							flag == false;
+							flag = false;
 						}
 					}
 				}
@@ -119,7 +119,7 @@ using namespace std;
 					ChangeFather(nextPages[i], newPage);
 					if (flag){
 						attribute = values[i];
-						flag == false;
+						flag = false;
 					}
 				}
 			}
@@ -169,7 +169,6 @@ using namespace std;
 				stream1 >> isLeaf >> attrType >> faPage >> num >> nextPage;
 			}
 			int nowLeaf = firstLeaf;
-			string value;
 			string attrs[32];
 			int front, next, attrNumber;
 			while (nowLeaf != aimPage){
