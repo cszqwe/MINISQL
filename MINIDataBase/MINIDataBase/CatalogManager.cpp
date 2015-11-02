@@ -8,7 +8,7 @@ int CatalogManager::getTableID(string tableName){
 	return frontPageManager->tableMap.find(tableName)->second;
 }
 int CatalogManager::creatTable(string tableName, int attrNum, string *attrName, int* attrType){
-	int id = getTableID(tableName);
+	int id = frontPageManager->newTable(tableName);
 	page* thisPage = bufferManager->findPage(id);
 	string content = "";
 	content= "[{\"TableName\": \"" + tableName+"\"}]";

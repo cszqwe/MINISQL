@@ -20,7 +20,7 @@ FrontPageManager::FrontPageManager(){
 		}
 	}
 
-}/*
+}
 int FrontPageManager::getTableID(string tableName){
 	return tableMap.find(tableName)->second;
 }
@@ -38,7 +38,4 @@ int FrontPageManager::save(){
 	bufferManager->updatePage(0,jsonContent.asString());
 	bufferManager->writePage(0);
 	return SUCCESS;
-}
-*/
-int main(){
 }
