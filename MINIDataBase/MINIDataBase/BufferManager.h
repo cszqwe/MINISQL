@@ -38,5 +38,6 @@ class BufferManager{
 		//New page, return the new page's ID
 		int newPage();
 		int getPageSize();
+
 };
 

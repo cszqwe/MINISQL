@@ -25,6 +25,12 @@ class CatalogManager{
 		int getPrimaryKeyID(string tablePage);
 		int creatTable(string tableName, int attrNum, string *attrName, int* attrType);
 		AttrSaver getTable(string tableName);
-		string* getIndexName();
+		AttrSaver getIndexName(string tableName);
 		int save(int pageID);
+		int getTablePage(string tableName);
+		int getPKNum(string tableName);
+		int getPKType(string tableName, int index);
+		int findIndexPlace(string tableName, string indexName);
+		int returnType(string tableName, string attrName);
+		void deleteIndex(string tableName, string indexName);
 };

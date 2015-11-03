@@ -1,354 +1,342 @@
-﻿Build started 2015/11/2 10:35:26.
-     1>Project "D:\cx\MINIDataBase\MINIDataBase\MINIDataBase.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\cx\MINIDataBase\jsoncpp-src-0.5.0\build\vs71\debug\lib_json" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt API.cpp BufferManager.cpp CatalogManager.cpp DataManager.cpp FrontPageManager.cpp FrontPageManager.h IndexManager.cpp Interpreter.cpp
-         Interpreter.cpp
-     1>d:\cx\minidatabase\minidatabase\interpreter.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
-     1>d:\cx\minidatabase\minidatabase\interpreter.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
-     1>d:\cx\minidatabase\minidatabase\interpreter.cpp(83): warning C4101: 'opNum' : unreferenced local variable
-     1>d:\cx\minidatabase\minidatabase\interpreter.cpp(107): warning C4101: 'attrNum' : unreferenced local variable
+﻿生成启动时间为 2015/11/3 22:03:39。
+     1>项目“E:\MINISQL\MINIDataBase\MINIDataBase\MINIDataBase.vcxproj”在节点 2 上(build 个目标)。
+       项目文件包含 ToolsVersion="12.0" 设置，但此工具集未知或缺失。您可以通过为此工具集安装相应的 .NET Framework 来解决此问题。将项目视为具有 ToolsVersion="4.0" 设置。
+     1>InitializeBuildStatus:
+         正在对“Debug\MINIDataBase.unsuccessfulbuild”执行 Touch 任务。
+       ClCompile:
+         F:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"D:\cx\MINIDataBase\jsoncpp-src-0.5.0\include" /I"E:\MINISQL\MINIDataBase\jsoncpp-src-0.5.0\include" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt API.cpp DataManager.cpp IndexManager.cpp
          IndexManager.cpp
-     1>d:\cx\minidatabase\minidatabase\bufferstruct.h(15): warning C4018: '<' : signed/unsigned mismatch
-     1>d:\cx\minidatabase\minidatabase\bufferstruct.h(6): error C2011: 'frame' : 'struct' type redefinition
-                 d:\cx\minidatabase\minidatabase\bufferstruct.h(6) : see declaration of 'frame'
-     1>d:\cx\minidatabase\minidatabase\bufferstruct.h(9): error C2011: 'page' : 'struct' type redefinition
-                 d:\cx\minidatabase\minidatabase\bufferstruct.h(9) : see declaration of 'page'
-     1>d:\cx\minidatabase\minidatabase\buffermanager.h(15): error C2011: 'BufferManager' : 'class' type redefinition
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.h(10): error C2079: 'bufferManager' uses undefined class 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.h(10): error C2371: 'bufferManager' : redefinition; different basic types
-                 d:\cx\minidatabase\minidatabase\datamanager.h(11) : see declaration of 'bufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.h(10): error C2440: 'initializing' : cannot convert from 'const char [6]' to 'int'
-                 There is no context in which this conversion is possible
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(15): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(15): error C2228: left of '.readPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(33): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(33): error C2228: left of '.readPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(39): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(39): error C2228: left of '.updatePage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(51): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(51): error C2228: left of '.readPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(52): error C2086: 'int nextPage' : redefinition
-                 d:\cx\minidatabase\minidatabase\indexmanager.cpp(50) : see declaration of 'nextPage'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(72): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(72): error C2228: left of '.updatePage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(77): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(77): error C2228: left of '.newPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(111): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(123): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(128): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(128): error C2228: left of '.newPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(131): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(131): error C2228: left of '.updatePage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(139): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(139): error C2228: left of '.updatePage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(145): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(145): error C2228: left of '.updatePage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(148): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(148): error C2228: left of '.updatePage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(160): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(160): error C2228: left of '.readPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(167): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(167): error C2228: left of '.readPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(173): error C2086: 'std::string value' : redefinition
-                 d:\cx\minidatabase\minidatabase\indexmanager.cpp(159) : see declaration of 'value'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(178): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(178): error C2228: left of '.readPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(192): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(192): error C2228: left of '.readPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(200): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(200): error C2228: left of '.readPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(219): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(219): error C2228: left of '.readPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(227): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(227): error C2228: left of '.readPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(241): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(241): error C2228: left of '.readPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(246): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(246): error C2228: left of '.readPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(260): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(260): error C2228: left of '.readPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(271): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(271): error C2228: left of '.updatePage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(277): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(277): error C2228: left of '.readPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(288): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(288): error C2228: left of '.updatePage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(295): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(295): error C2228: left of '.readPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(302): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(302): error C2228: left of '.readPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(318): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(318): error C2228: left of '.readPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(323): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(323): error C2228: left of '.readPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(328): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(328): error C2228: left of '.updatePage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(334): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(334): error C2228: left of '.readPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(343): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(343): error C2228: left of '.readPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(360): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(360): error C2228: left of '.readPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(380): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(380): error C2228: left of '.updatePage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(383): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(383): error C2228: left of '.newPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(422): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(422): error C2228: left of '.updatePage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(424): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.cpp(424): error C2228: left of '.updatePage' must have class/struct/union
-         FrontPageManager.h
-     1>d:\cx\minidatabase\minidatabase\bufferstruct.h(15): warning C4018: '<' : signed/unsigned mismatch
-     1>d:\cx\minidatabase\minidatabase\frontpagemanager.h(8): fatal error C1083: Cannot open include file: 'json\json.h': No such file or directory
-         FrontPageManager.cpp
-     1>d:\cx\minidatabase\minidatabase\bufferstruct.h(15): warning C4018: '<' : signed/unsigned mismatch
-     1>d:\cx\minidatabase\minidatabase\frontpagemanager.h(8): fatal error C1083: Cannot open include file: 'json\json.h': No such file or directory
+     1>e:\minisql\minidatabase\minidatabase\bufferstruct.h(15): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\minisql\minidatabase\minidatabase\bufferstruct.h(6): error C2011: “frame”:“struct”类型重定义
+                 e:\minisql\minidatabase\minidatabase\bufferstruct.h(6) : 参见“frame”的声明
+     1>e:\minisql\minidatabase\minidatabase\bufferstruct.h(9): error C2011: “page”:“struct”类型重定义
+                 e:\minisql\minidatabase\minidatabase\bufferstruct.h(9) : 参见“page”的声明
+     1>e:\minisql\minidatabase\minidatabase\buffermanager.h(15): error C2011: “BufferManager”:“class”类型重定义
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.h(10): error C2079: “bufferManager”使用未定义的 class“BufferManager”
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.h(10): error C2371: “bufferManager”: 重定义；不同的基类型
+                 e:\minisql\minidatabase\minidatabase\datamanager.h(11) : 参见“bufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.h(10): error C2440: “初始化”: 无法从“const char [6]”转换为“int”
+                 没有使该转换得以执行的上下文
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(15): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(15): error C2228: “.readPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(33): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(33): error C2228: “.readPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(39): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(39): error C2228: “.updatePage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(51): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(51): error C2228: “.readPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(52): error C2086: “int nextPage”: 重定义
+                 e:\minisql\minidatabase\minidatabase\indexmanager.cpp(50) : 参见“nextPage”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(72): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(72): error C2228: “.updatePage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(77): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(77): error C2228: “.newPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(111): warning C4553: “==”: 运算符不起任何作用；是否是有意使用“=”的?
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(123): warning C4553: “==”: 运算符不起任何作用；是否是有意使用“=”的?
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(128): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(128): error C2228: “.newPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(131): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(131): error C2228: “.updatePage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(139): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(139): error C2228: “.updatePage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(145): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(145): error C2228: “.updatePage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(148): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(148): error C2228: “.updatePage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(160): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(160): error C2228: “.readPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(167): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(167): error C2228: “.readPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(173): error C2086: “std::string value”: 重定义
+                 e:\minisql\minidatabase\minidatabase\indexmanager.cpp(159) : 参见“value”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(178): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(178): error C2228: “.readPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(192): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(192): error C2228: “.readPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(200): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(200): error C2228: “.readPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(219): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(219): error C2228: “.readPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(227): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(227): error C2228: “.readPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(241): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(241): error C2228: “.readPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(246): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(246): error C2228: “.readPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(260): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(260): error C2228: “.readPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(271): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(271): error C2228: “.updatePage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(277): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(277): error C2228: “.readPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(288): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(288): error C2228: “.updatePage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(295): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(295): error C2228: “.readPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(302): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(302): error C2228: “.readPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(318): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(318): error C2228: “.readPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(323): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(323): error C2228: “.readPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(328): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(328): error C2228: “.updatePage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(334): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(334): error C2228: “.readPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(343): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(343): error C2228: “.readPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(360): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(360): error C2228: “.readPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(380): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(380): error C2228: “.updatePage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(383): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(383): error C2228: “.newPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(422): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(422): error C2228: “.updatePage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(424): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.cpp(424): error C2228: “.updatePage”的左边必须有类/结构/联合
          DataManager.cpp
-     1>d:\cx\minidatabase\minidatabase\bufferstruct.h(15): warning C4018: '<' : signed/unsigned mismatch
-     1>d:\cx\minidatabase\minidatabase\bufferstruct.h(6): error C2011: 'frame' : 'struct' type redefinition
-                 d:\cx\minidatabase\minidatabase\bufferstruct.h(6) : see declaration of 'frame'
-     1>d:\cx\minidatabase\minidatabase\bufferstruct.h(9): error C2011: 'page' : 'struct' type redefinition
-                 d:\cx\minidatabase\minidatabase\bufferstruct.h(9) : see declaration of 'page'
-     1>d:\cx\minidatabase\minidatabase\buffermanager.h(15): error C2011: 'BufferManager' : 'class' type redefinition
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(88): error C2084: function 'SavePlace DataManager::InsertData(int,int,int,int,std::string *)' already has a body
-                 d:\cx\minidatabase\minidatabase\datamanager.h(14) : see previous definition of 'InsertData'
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(97): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(97): error C2228: left of '.newPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(98): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(98): error C2228: left of '.updatePage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(108): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(108): error C2228: left of '.readPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(128): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(128): error C2228: left of '.newPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(129): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(129): error C2228: left of '.updatePage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(142): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(142): error C2228: left of '.newPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(143): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(143): error C2228: left of '.updatePage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(151): error C2084: function 'int DataManager::DeleteData(int,OpType)' already has a body
-                 d:\cx\minidatabase\minidatabase\datamanager.h(15) : see previous definition of 'DeleteData'
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(156): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(156): error C2228: left of '.readPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(170): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(170): error C2228: left of '.readPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(178): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(178): error C2228: left of '.updatePage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(182): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(182): error C2228: left of '.readPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(189): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(189): error C2228: left of '.updatePage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(192): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(192): error C2228: left of '.updatePage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(197): error C2084: function 'int DataManager::DeleteData(int)' already has a body
-                 d:\cx\minidatabase\minidatabase\datamanager.h(16) : see previous definition of 'DeleteData'
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(202): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(202): error C2228: left of '.readPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(207): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(207): error C2228: left of '.updatePage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(211): error C2084: function 'Error DataManager::Select(int,int,OpType *)' already has a body
-                 d:\cx\minidatabase\minidatabase\datamanager.h(17) : see previous definition of 'Select'
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(220): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(220): error C2228: left of '.readPage' must have class/struct/union
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(221): error C2027: use of undefined type 'BufferManager'
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\datamanager.cpp(221): error C2228: left of '.updatePage' must have class/struct/union
-         CatalogManager.cpp
-     1>d:\cx\minidatabase\minidatabase\catalogmanager.h(7): fatal error C1083: Cannot open include file: 'json\json.h': No such file or directory
-         BufferManager.cpp
-     1>d:\cx\minidatabase\minidatabase\bufferstruct.h(15): warning C4018: '<' : signed/unsigned mismatch
-     1>d:\cx\minidatabase\minidatabase\buffermanager.cpp(26): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(211) : see declaration of 'fopen'
-     1>d:\cx\minidatabase\minidatabase\buffermanager.cpp(76): warning C4018: '<' : signed/unsigned mismatch
+     1>e:\minisql\minidatabase\minidatabase\bufferstruct.h(15): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\minisql\minidatabase\minidatabase\bufferstruct.h(6): error C2011: “frame”:“struct”类型重定义
+                 e:\minisql\minidatabase\minidatabase\bufferstruct.h(6) : 参见“frame”的声明
+     1>e:\minisql\minidatabase\minidatabase\bufferstruct.h(9): error C2011: “page”:“struct”类型重定义
+                 e:\minisql\minidatabase\minidatabase\bufferstruct.h(9) : 参见“page”的声明
+     1>e:\minisql\minidatabase\minidatabase\buffermanager.h(15): error C2011: “BufferManager”:“class”类型重定义
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(88): error C2084: 函数“SavePlace DataManager::InsertData(int,int,int,int,std::string *)”已有主体
+                 e:\minisql\minidatabase\minidatabase\datamanager.h(14) : 参见“InsertData”的前一个定义
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(97): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(97): error C2228: “.newPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(98): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(98): error C2228: “.updatePage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(108): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(108): error C2228: “.readPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(128): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(128): error C2228: “.newPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(129): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(129): error C2228: “.updatePage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(142): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(142): error C2228: “.newPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(143): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(143): error C2228: “.updatePage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(151): error C2084: 函数“int DataManager::DeleteData(int,OpType)”已有主体
+                 e:\minisql\minidatabase\minidatabase\datamanager.h(15) : 参见“DeleteData”的前一个定义
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(156): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(156): error C2228: “.readPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(170): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(170): error C2228: “.readPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(178): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(178): error C2228: “.updatePage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(182): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(182): error C2228: “.readPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(189): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(189): error C2228: “.updatePage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(192): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(192): error C2228: “.updatePage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(197): error C2084: 函数“int DataManager::DeleteData(int)”已有主体
+                 e:\minisql\minidatabase\minidatabase\datamanager.h(16) : 参见“DeleteData”的前一个定义
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(202): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(202): error C2228: “.readPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(207): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(207): error C2228: “.updatePage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(211): error C2084: 函数“Error DataManager::Select(int,int,OpType *)”已有主体
+                 e:\minisql\minidatabase\minidatabase\datamanager.h(17) : 参见“Select”的前一个定义
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(220): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(220): error C2228: “.readPage”的左边必须有类/结构/联合
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(221): error C2027: 使用了未定义类型“BufferManager”
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\datamanager.cpp(221): error C2228: “.updatePage”的左边必须有类/结构/联合
          API.cpp
-     1>d:\cx\minidatabase\minidatabase\bufferstruct.h(15): warning C4018: '<' : signed/unsigned mismatch
-     1>d:\cx\minidatabase\minidatabase\bufferstruct.h(6): error C2011: 'frame' : 'struct' type redefinition
-                 d:\cx\minidatabase\minidatabase\bufferstruct.h(6) : see declaration of 'frame'
-     1>d:\cx\minidatabase\minidatabase\bufferstruct.h(9): error C2011: 'page' : 'struct' type redefinition
-                 d:\cx\minidatabase\minidatabase\bufferstruct.h(9) : see declaration of 'page'
-     1>d:\cx\minidatabase\minidatabase\buffermanager.h(15): error C2011: 'BufferManager' : 'class' type redefinition
-                 d:\cx\minidatabase\minidatabase\buffermanager.h(15) : see declaration of 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.h(10): error C2079: 'bufferManager' uses undefined class 'BufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.h(10): error C2371: 'bufferManager' : redefinition; different basic types
-                 d:\cx\minidatabase\minidatabase\datamanager.h(11) : see declaration of 'bufferManager'
-     1>d:\cx\minidatabase\minidatabase\indexmanager.h(10): error C2440: 'initializing' : cannot convert from 'const char [6]' to 'int'
-                 There is no context in which this conversion is possible
-     1>d:\cx\minidatabase\minidatabase\api.cpp(9): error C2084: function 'Error::Error(void)' already has a body
-                 d:\cx\minidatabase\minidatabase\api.h(15) : see previous definition of '{ctor}'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(10): error C2084: function 'Error::Error(bool,std::string)' already has a body
-                 d:\cx\minidatabase\minidatabase\api.h(16) : see previous definition of '{ctor}'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(18): error C2084: function 'OpType::OpType(int,std::string,int,std::string,int)' already has a body
-                 d:\cx\minidatabase\minidatabase\api.h(32) : see previous definition of '{ctor}'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(28): error C2084: function 'Select::Select(std::string,int,OpType *)' already has a body
-                 d:\cx\minidatabase\minidatabase\api.h(48) : see previous definition of '{ctor}'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(34): error C2084: function 'Error Select::Execute(void)' already has a body
-                 d:\cx\minidatabase\minidatabase\api.h(49) : see previous definition of 'Execute'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(35): error C2264: 'Error::Error' : error in function definition or declaration; function not called
-     1>d:\cx\minidatabase\minidatabase\api.cpp(39): error C2065: 'catalogManager' : undeclared identifier
-     1>d:\cx\minidatabase\minidatabase\api.cpp(39): error C2228: left of '.FindIndexPlace' must have class/struct/union
-                 type is 'unknown-type'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(41): error C2065: 'catalogManager' : undeclared identifier
-     1>d:\cx\minidatabase\minidatabase\api.cpp(41): error C2228: left of '.AttrType' must have class/struct/union
-                 type is 'unknown-type'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(45): error C2065: 'catalogManager' : undeclared identifier
-     1>d:\cx\minidatabase\minidatabase\api.cpp(45): error C2228: left of '.GetTablePage' must have class/struct/union
-                 type is 'unknown-type'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(51): error C2084: function 'Insert::Insert(std::string,int,std::string *)' already has a body
-                 d:\cx\minidatabase\minidatabase\api.h(57) : see previous definition of '{ctor}'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(57): error C2084: function 'Error Insert::Execute(void)' already has a body
-                 d:\cx\minidatabase\minidatabase\api.h(58) : see previous definition of 'Execute'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(60): error C2264: 'Error::Error' : error in function definition or declaration; function not called
-     1>d:\cx\minidatabase\minidatabase\api.cpp(63): error C2065: 'catalogManager' : undeclared identifier
-     1>d:\cx\minidatabase\minidatabase\api.cpp(63): error C2228: left of '.GetTablePage' must have class/struct/union
-                 type is 'unknown-type'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(64): error C2065: 'catalogManager' : undeclared identifier
-     1>d:\cx\minidatabase\minidatabase\api.cpp(64): error C2228: left of '.GetPKnum' must have class/struct/union
-                 type is 'unknown-type'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(65): error C2065: 'catalogManager' : undeclared identifier
-     1>d:\cx\minidatabase\minidatabase\api.cpp(65): error C2228: left of '.GetType' must have class/struct/union
-                 type is 'unknown-type'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(67): error C2065: 'catalogManager' : undeclared identifier
-     1>d:\cx\minidatabase\minidatabase\api.cpp(67): error C2228: left of '.ChangeFirstPage' must have class/struct/union
-                 type is 'unknown-type'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(69): error C2065: 'catalogManager' : undeclared identifier
-     1>d:\cx\minidatabase\minidatabase\api.cpp(69): error C2228: left of '.GetIndexName' must have class/struct/union
-                 type is 'unknown-type'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(70): error C2065: 'catalogManager' : undeclared identifier
-     1>d:\cx\minidatabase\minidatabase\api.cpp(70): error C2228: left of '.GetAttrName' must have class/struct/union
-                 type is 'unknown-type'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(74): error C2065: 'catalogManager' : undeclared identifier
-     1>d:\cx\minidatabase\minidatabase\api.cpp(74): error C2228: left of '.FindIndexPlace' must have class/struct/union
-                 type is 'unknown-type'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(80): error C2084: function 'CreatTable::CreatTable(std::string,int,std::string *,int *)' already has a body
-                 d:\cx\minidatabase\minidatabase\api.h(67) : see previous definition of '{ctor}'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(89): error C2084: function 'Error CreatTable::Execute(void)' already has a body
-                 d:\cx\minidatabase\minidatabase\api.h(68) : see previous definition of 'Execute'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(90): error C2264: 'Error::Error' : error in function definition or declaration; function not called
-     1>d:\cx\minidatabase\minidatabase\api.cpp(92): error C2065: 'catalogManager' : undeclared identifier
-     1>d:\cx\minidatabase\minidatabase\api.cpp(92): error C2228: left of '.NewTable' must have class/struct/union
-                 type is 'unknown-type'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(93): error C2065: 'catalogManager' : undeclared identifier
-     1>d:\cx\minidatabase\minidatabase\api.cpp(93): error C2228: left of '.GetIndexName' must have class/struct/union
-                 type is 'unknown-type'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(97): error C2065: 'catalogManager' : undeclared identifier
-     1>d:\cx\minidatabase\minidatabase\api.cpp(97): error C2228: left of '.FindIndexPlace' must have class/struct/union
-                 type is 'unknown-type'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(97): error C2228: left of '.ReturnType' must have class/struct/union
-                 type is 'unknown-type'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(97): error C2660: 'IndexManager::NewIndex' : function does not take 1 arguments
-     1>d:\cx\minidatabase\minidatabase\api.cpp(106): error C2084: function 'DropTable::DropTable(std::string)' already has a body
-                 d:\cx\minidatabase\minidatabase\api.h(74) : see previous definition of '{ctor}'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(109): error C2084: function 'Error DropTable::Execute(void)' already has a body
-                 d:\cx\minidatabase\minidatabase\api.h(75) : see previous definition of 'Execute'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(110): error C2264: 'Error::Error' : error in function definition or declaration; function not called
-     1>d:\cx\minidatabase\minidatabase\api.cpp(113): error C2065: 'catalogManager' : undeclared identifier
-     1>d:\cx\minidatabase\minidatabase\api.cpp(113): error C2228: left of '.GetTablePage' must have class/struct/union
-                 type is 'unknown-type'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(115): error C2065: 'catalogManager' : undeclared identifier
-     1>d:\cx\minidatabase\minidatabase\api.cpp(115): error C2228: left of '.GetIndexName' must have class/struct/union
-                 type is 'unknown-type'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(118): error C2065: 'catalogManager' : undeclared identifier
-     1>d:\cx\minidatabase\minidatabase\api.cpp(118): error C2228: left of '.FindIndexPlace' must have class/struct/union
-                 type is 'unknown-type'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(120): error C2065: 'catalogManager' : undeclared identifier
-     1>d:\cx\minidatabase\minidatabase\api.cpp(120): error C2228: left of '.DeleteTable' must have class/struct/union
-                 type is 'unknown-type'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(126): error C2084: function 'CreatIndex::CreatIndex(std::string,std::string,std::string)' already has a body
-                 d:\cx\minidatabase\minidatabase\api.h(83) : see previous definition of '{ctor}'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(131): error C2084: function 'Error CreatIndex::Execute(void)' already has a body
-                 d:\cx\minidatabase\minidatabase\api.h(84) : see previous definition of 'Execute'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(132): error C2264: 'Error::Error' : error in function definition or declaration; function not called
-     1>d:\cx\minidatabase\minidatabase\api.cpp(134): error C2065: 'catalogManager' : undeclared identifier
-     1>d:\cx\minidatabase\minidatabase\api.cpp(134): error C2228: left of '.NewIndex' must have class/struct/union
-                 type is 'unknown-type'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(135): error C2065: 'catalogManager' : undeclared identifier
-     1>d:\cx\minidatabase\minidatabase\api.cpp(135): error C2228: left of '.ReturnType' must have class/struct/union
-                 type is 'unknown-type'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(135): error C2660: 'IndexManager::NewIndex' : function does not take 1 arguments
-     1>d:\cx\minidatabase\minidatabase\api.cpp(140): error C2084: function 'DropIndex::DropIndex(std::string)' already has a body
-                 d:\cx\minidatabase\minidatabase\api.h(90) : see previous definition of '{ctor}'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(143): error C2084: function 'Error DropIndex::Execute(void)' already has a body
-                 d:\cx\minidatabase\minidatabase\api.h(91) : see previous definition of 'Execute'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(144): error C2264: 'Error::Error' : error in function definition or declaration; function not called
-     1>d:\cx\minidatabase\minidatabase\api.cpp(146): error C2065: 'catalogManager' : undeclared identifier
-     1>d:\cx\minidatabase\minidatabase\api.cpp(146): error C2228: left of '.FindIndex' must have class/struct/union
-                 type is 'unknown-type'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(148): error C2065: 'catalogManager' : undeclared identifier
-     1>d:\cx\minidatabase\minidatabase\api.cpp(148): error C2228: left of '.DeleteIndex' must have class/struct/union
-                 type is 'unknown-type'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(154): error C2084: function 'Delete::Delete(std::string,OpType)' already has a body
-                 d:\cx\minidatabase\minidatabase\api.h(99) : see previous definition of '{ctor}'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(159): error C2084: function 'Delete::Delete(std::string)' already has a body
-                 d:\cx\minidatabase\minidatabase\api.h(101) : see previous definition of '{ctor}'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(163): error C2084: function 'Error Delete::Execute(void)' already has a body
-                 d:\cx\minidatabase\minidatabase\api.h(102) : see previous definition of 'Execute'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(164): error C2264: 'Error::Error' : error in function definition or declaration; function not called
-     1>d:\cx\minidatabase\minidatabase\api.cpp(167): error C2065: 'catalogManager' : undeclared identifier
-     1>d:\cx\minidatabase\minidatabase\api.cpp(167): error C2228: left of '.GetTablePage' must have class/struct/union
-                 type is 'unknown-type'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(170): error C2065: 'catalogManager' : undeclared identifier
-     1>d:\cx\minidatabase\minidatabase\api.cpp(170): error C2228: left of '.GetIndexName' must have class/struct/union
-                 type is 'unknown-type'
-     1>d:\cx\minidatabase\minidatabase\api.cpp(172): error C2065: 'catalogManager' : undeclared identifier
-     1>d:\cx\minidatabase\minidatabase\api.cpp(172): error C2228: left of '.FindIndexPlace' must have class/struct/union
-                 type is 'unknown-type'
-         Generating Code...
-     1>Done Building Project "D:\cx\MINIDataBase\MINIDataBase\MINIDataBase.vcxproj" (Build target(s)) -- FAILED.
+     1>e:\minisql\minidatabase\minidatabase\bufferstruct.h(15): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\minisql\minidatabase\minidatabase\bufferstruct.h(6): error C2011: “frame”:“struct”类型重定义
+                 e:\minisql\minidatabase\minidatabase\bufferstruct.h(6) : 参见“frame”的声明
+     1>e:\minisql\minidatabase\minidatabase\bufferstruct.h(9): error C2011: “page”:“struct”类型重定义
+                 e:\minisql\minidatabase\minidatabase\bufferstruct.h(9) : 参见“page”的声明
+     1>e:\minisql\minidatabase\minidatabase\buffermanager.h(15): error C2011: “BufferManager”:“class”类型重定义
+                 e:\minisql\minidatabase\minidatabase\buffermanager.h(15) : 参见“BufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.h(10): error C2079: “bufferManager”使用未定义的 class“BufferManager”
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.h(10): error C2371: “bufferManager”: 重定义；不同的基类型
+                 e:\minisql\minidatabase\minidatabase\datamanager.h(11) : 参见“bufferManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\indexmanager.h(10): error C2440: “初始化”: 无法从“const char [6]”转换为“int”
+                 没有使该转换得以执行的上下文
+     1>e:\minisql\minidatabase\minidatabase\temp.h(3): error C2011: “AttrSaver”:“class”类型重定义
+                 e:\minisql\minidatabase\minidatabase\api.h(18) : 参见“AttrSaver”的声明
+     1>e:\minisql\minidatabase\minidatabase\frontpagemanager.h(10): error C2011: “FrontPageManager”:“class”类型重定义
+                 e:\minisql\minidatabase\minidatabase\frontpagemanager.h(10) : 参见“FrontPageManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(11): error C2084: 函数“Error::Error(void)”已有主体
+                 e:\minisql\minidatabase\minidatabase\api.h(15) : 参见“{ctor}”的前一个定义
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(12): error C2084: 函数“Error::Error(bool,std::string)”已有主体
+                 e:\minisql\minidatabase\minidatabase\api.h(16) : 参见“{ctor}”的前一个定义
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(18): error C2084: 函数“OpType::OpType(int,std::string,int,std::string,int)”已有主体
+                 e:\minisql\minidatabase\minidatabase\api.h(32) : 参见“{ctor}”的前一个定义
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(27): error C2084: 函数“Select::Select(std::string,int,OpType *)”已有主体
+                 e:\minisql\minidatabase\minidatabase\api.h(48) : 参见“{ctor}”的前一个定义
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(33): error C2084: 函数“Error Select::Execute(void)”已有主体
+                 e:\minisql\minidatabase\minidatabase\api.h(49) : 参见“Execute”的前一个定义
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(34): error C2264: “Error::Error”: 函数定义或声明中有错误；未调用函数
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(38): error C2039: “FindIndexPlace”: 不是“CatalogManager”的成员
+                 e:\minisql\minidatabase\minidatabase\catalogmanager.h(11) : 参见“CatalogManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(40): error C2039: “AttrType”: 不是“CatalogManager”的成员
+                 e:\minisql\minidatabase\minidatabase\catalogmanager.h(11) : 参见“CatalogManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(44): error C2039: “GetTablePage”: 不是“CatalogManager”的成员
+                 e:\minisql\minidatabase\minidatabase\catalogmanager.h(11) : 参见“CatalogManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(50): error C2084: 函数“Insert::Insert(std::string,int,std::string *)”已有主体
+                 e:\minisql\minidatabase\minidatabase\api.h(57) : 参见“{ctor}”的前一个定义
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(56): error C2084: 函数“Error Insert::Execute(void)”已有主体
+                 e:\minisql\minidatabase\minidatabase\api.h(58) : 参见“Execute”的前一个定义
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(58): error C2079: “index”使用未定义的 class“AttrSaver”
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(58): error C2079: “attrGet”使用未定义的 class“AttrSaver”
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(59): error C2264: “Error::Error”: 函数定义或声明中有错误；未调用函数
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(62): error C2039: “GetTablePage”: 不是“CatalogManager”的成员
+                 e:\minisql\minidatabase\minidatabase\catalogmanager.h(11) : 参见“CatalogManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(63): error C2039: “GetPKnum”: 不是“CatalogManager”的成员
+                 e:\minisql\minidatabase\minidatabase\catalogmanager.h(11) : 参见“CatalogManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(64): error C2039: “GetType”: 不是“CatalogManager”的成员
+                 e:\minisql\minidatabase\minidatabase\catalogmanager.h(11) : 参见“CatalogManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(66): error C2039: “ChangeFirstPage”: 不是“CatalogManager”的成员
+                 e:\minisql\minidatabase\minidatabase\catalogmanager.h(11) : 参见“CatalogManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(68): error C2039: “GetIndexName”: 不是“CatalogManager”的成员
+                 e:\minisql\minidatabase\minidatabase\catalogmanager.h(11) : 参见“CatalogManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(69): error C2039: “GetAttrName”: 不是“CatalogManager”的成员
+                 e:\minisql\minidatabase\minidatabase\catalogmanager.h(11) : 参见“CatalogManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(70): error C2228: “.attrNum”的左边必须有类/结构/联合
+                 类型是“int”
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(71): error C2228: “.attrNum”的左边必须有类/结构/联合
+                 类型是“int”
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(72): error C2228: “.attrName”的左边必须有类/结构/联合
+                 类型是“int”
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(72): error C2228: “.attrName”的左边必须有类/结构/联合
+                 类型是“int”
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(73): error C2039: “FindIndexPlace”: 不是“CatalogManager”的成员
+                 e:\minisql\minidatabase\minidatabase\catalogmanager.h(11) : 参见“CatalogManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(73): error C2228: “.attrName”的左边必须有类/结构/联合
+                 类型是“int”
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(79): error C2084: 函数“CreatTable::CreatTable(std::string,int,std::string *,int *)”已有主体
+                 e:\minisql\minidatabase\minidatabase\api.h(67) : 参见“{ctor}”的前一个定义
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(88): error C2084: 函数“Error CreatTable::Execute(void)”已有主体
+                 e:\minisql\minidatabase\minidatabase\api.h(68) : 参见“Execute”的前一个定义
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(89): error C2264: “Error::Error”: 函数定义或声明中有错误；未调用函数
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(90): error C2079: “index”使用未定义的 class“AttrSaver”
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(92): error C2039: “GetIndexName”: 不是“CatalogManager”的成员
+                 e:\minisql\minidatabase\minidatabase\catalogmanager.h(11) : 参见“CatalogManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(93): error C2228: “.attrNum”的左边必须有类/结构/联合
+                 类型是“int”
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(95): error C2039: “FindIndexPlace”: 不是“CatalogManager”的成员
+                 e:\minisql\minidatabase\minidatabase\catalogmanager.h(11) : 参见“CatalogManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(95): error C2228: “.attrName”的左边必须有类/结构/联合
+                 类型是“int”
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(95): error C2039: “ReturnType”: 不是“CatalogManager”的成员
+                 e:\minisql\minidatabase\minidatabase\catalogmanager.h(11) : 参见“CatalogManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(101): error C2084: 函数“DropTable::DropTable(std::string)”已有主体
+                 e:\minisql\minidatabase\minidatabase\api.h(74) : 参见“{ctor}”的前一个定义
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(104): error C2084: 函数“Error DropTable::Execute(void)”已有主体
+                 e:\minisql\minidatabase\minidatabase\api.h(75) : 参见“Execute”的前一个定义
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(105): error C2264: “Error::Error”: 函数定义或声明中有错误；未调用函数
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(107): error C2079: “index”使用未定义的 class“AttrSaver”
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(108): error C2039: “GetTablePage”: 不是“CatalogManager”的成员
+                 e:\minisql\minidatabase\minidatabase\catalogmanager.h(11) : 参见“CatalogManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(110): error C2039: “GetIndexName”: 不是“CatalogManager”的成员
+                 e:\minisql\minidatabase\minidatabase\catalogmanager.h(11) : 参见“CatalogManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(111): error C2228: “.attrNum”的左边必须有类/结构/联合
+                 类型是“int”
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(113): error C2039: “FindIndexPlace”: 不是“CatalogManager”的成员
+                 e:\minisql\minidatabase\minidatabase\catalogmanager.h(11) : 参见“CatalogManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(113): error C2228: “.attrName”的左边必须有类/结构/联合
+                 类型是“int”
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(115): error C2039: “DeleteTable”: 不是“CatalogManager”的成员
+                 e:\minisql\minidatabase\minidatabase\catalogmanager.h(11) : 参见“CatalogManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(121): error C2084: 函数“CreatIndex::CreatIndex(std::string,std::string,std::string)”已有主体
+                 e:\minisql\minidatabase\minidatabase\api.h(83) : 参见“{ctor}”的前一个定义
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(126): error C2084: 函数“Error CreatIndex::Execute(void)”已有主体
+                 e:\minisql\minidatabase\minidatabase\api.h(84) : 参见“Execute”的前一个定义
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(127): error C2264: “Error::Error”: 函数定义或声明中有错误；未调用函数
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(129): error C2039: “NewIndex”: 不是“CatalogManager”的成员
+                 e:\minisql\minidatabase\minidatabase\catalogmanager.h(11) : 参见“CatalogManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(130): error C2039: “ReturnType”: 不是“CatalogManager”的成员
+                 e:\minisql\minidatabase\minidatabase\catalogmanager.h(11) : 参见“CatalogManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(135): error C2084: 函数“DropIndex::DropIndex(std::string)”已有主体
+                 e:\minisql\minidatabase\minidatabase\api.h(90) : 参见“{ctor}”的前一个定义
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(138): error C2084: 函数“Error DropIndex::Execute(void)”已有主体
+                 e:\minisql\minidatabase\minidatabase\api.h(91) : 参见“Execute”的前一个定义
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(139): error C2264: “Error::Error”: 函数定义或声明中有错误；未调用函数
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(141): error C2039: “FindIndex”: 不是“CatalogManager”的成员
+                 e:\minisql\minidatabase\minidatabase\catalogmanager.h(11) : 参见“CatalogManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(143): error C2039: “DeleteIndex”: 不是“CatalogManager”的成员
+                 e:\minisql\minidatabase\minidatabase\catalogmanager.h(11) : 参见“CatalogManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(149): error C2084: 函数“Delete::Delete(std::string,OpType)”已有主体
+                 e:\minisql\minidatabase\minidatabase\api.h(99) : 参见“{ctor}”的前一个定义
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(154): error C2084: 函数“Delete::Delete(std::string)”已有主体
+                 e:\minisql\minidatabase\minidatabase\api.h(101) : 参见“{ctor}”的前一个定义
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(158): error C2084: 函数“Error Delete::Execute(void)”已有主体
+                 e:\minisql\minidatabase\minidatabase\api.h(102) : 参见“Execute”的前一个定义
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(159): error C2264: “Error::Error”: 函数定义或声明中有错误；未调用函数
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(160): error C2079: “index”使用未定义的 class“AttrSaver”
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(162): error C2039: “GetTablePage”: 不是“CatalogManager”的成员
+                 e:\minisql\minidatabase\minidatabase\catalogmanager.h(11) : 参见“CatalogManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(165): error C2039: “GetIndexName”: 不是“CatalogManager”的成员
+                 e:\minisql\minidatabase\minidatabase\catalogmanager.h(11) : 参见“CatalogManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(166): error C2228: “.attrNum”的左边必须有类/结构/联合
+                 类型是“int”
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(167): error C2039: “FindIndexPlace”: 不是“CatalogManager”的成员
+                 e:\minisql\minidatabase\minidatabase\catalogmanager.h(11) : 参见“CatalogManager”的声明
+     1>e:\minisql\minidatabase\minidatabase\api.cpp(167): error C2228: “.attrName”的左边必须有类/结构/联合
+                 类型是“int”
+         正在生成代码...
+     1>已完成生成项目“E:\MINISQL\MINIDataBase\MINIDataBase\MINIDataBase.vcxproj”(build 个目标)的操作 - 失败。
 
-Build FAILED.
+生成失败。
 
-Time Elapsed 00:00:03.60
+已用时间 00:00:01.52
