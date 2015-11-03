@@ -21,8 +21,10 @@ class CatalogManager{
 	public:
 		CatalogManager();
 		int getTableID(string tableName);
+		int newIndex(string tableName, string attrName, string indexName);
 		int getPrimaryKeyID(string tablePage);
 		int creatTable(string tableName, int attrNum, string *attrName, int* attrType);
 		AttrSaver getTable(string tableName);
+		string* getIndexName();
 		int save(int pageID);
 };
