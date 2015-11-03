@@ -1,18 +1,18 @@
 #include<string>
 #include"DataManager.h"
 #include"IndexManager.h"
+#include"CatalogManager.h"
+#include"FrontPageManager.h"
 #include"API.h"
 using namespace std;
 DataManager dataManager;
 IndexManager indexManager;
-
+CatalogManager catalogManager;
 Error::Error(){}
 Error::Error(bool flag, string eR){
 		isSucc = flag;
 		errorReason = eR;
 }
-
-
 
 OpType::OpType(){}
 OpType::OpType(int ope, string attrName, int attrPos, string value, int attrType){
@@ -22,7 +22,6 @@ OpType::OpType(int ope, string attrName, int attrPos, string value, int attrType
 		this->attrPos = attrPos;
 		this->attrType = attrType;
 	}
-
 
 
 	Select::Select(string tableName, int opNum, OpType *op){
@@ -89,15 +88,11 @@ OpType::OpType(int ope, string attrName, int attrPos, string value, int attrType
 	Error CreatTable::Execute(){
 		Error re;
 		AttrSaver index;
-		catalogManager.NewTable(tableName, attrNum, attrName, attrType);//新建一个table的属性
+		catalogManager.creatTable(tableName, attrNum, attrName, attrType);//新建一个table的属性
 		index = catalogManager.GetIndexName(tableName);//返回所有tableName中的index
 		for (int i = 0; i < index.attrNum; i++)
 		{
-
 			indexManager.NewIndex(catalogManager.FindIndexPlace(tableName, index.attrName[i]), catalogManager.ReturnType(tableName, attrName));//在page中建立新的index
-		//	int p;
-	//		p=indexManager.NewIndex(index.attrName[i]);//新建index，返回页数
-	//		catalogManager.IndexPlace(index.attrName[i], p);//将新建的index位置返回给catalog保存	
 		}
 		re.isSucc = 1;
 		re.errorReason = "Creat table success!";

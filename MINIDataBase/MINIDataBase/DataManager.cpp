@@ -3,6 +3,7 @@
 #include<sstream>
 #include<string>
 #include<iostream>
+#include"BufferManager.h"
 using namespace std;
 bool Compare(string a, string b, int comType, int attrType){
 	stringstream stream1;
@@ -93,8 +94,8 @@ bool Compare(string a, string b, int comType, int attrType){
 			for (int i = 0; i < attrNum; i++) stream << ' ' << attr[i];
 			getline(stream, text);
 			re.first = true;
-			re.page = bufferManager.NewPage();//新建page
-			bufferManager.SendText(re.page, text);
+			re.page = bufferManager.newPage();//新建page
+			bufferManager.updatePage(re.page, text);
 			return re;
 		}
 		else {
@@ -104,7 +105,7 @@ bool Compare(string a, string b, int comType, int attrType){
 			string text;
 			bool flag = true;
 			while (p != -1){
-				text = bufferManager.GetText(p);
+				text = bufferManager.readPage(p);
 				stringstream stream;
 				stream << text;
 				stream >> front >> next;
@@ -124,8 +125,8 @@ bool Compare(string a, string b, int comType, int attrType){
 						getline(stream, text);
 						if (flag)re.first = true;
 						else re.first = false;
-						re.page = bufferManager.NewPage();//新建page
-						bufferManager.SendText(re.page, text);
+						re.page = bufferManager.newPage();//新建page
+						bufferManager.updatePage(re.page, text);
 						return re;
 					}
 					p = next;
@@ -138,8 +139,8 @@ bool Compare(string a, string b, int comType, int attrType){
 					getline(stream, text);
 					if (flag)re.first = true;
 					else re.first = false;
-					re.page = bufferManager.NewPage();//新建page
-					bufferManager.SendText(re.page, text);
+					re.page = bufferManager.newPage();//新建page
+					bufferManager.updatePage(re.page, text);
 					return re;
 				}
 				flag = false;
@@ -152,7 +153,7 @@ bool Compare(string a, string b, int comType, int attrType){
 		int p = page;
 		int front, next;
 		while (p != -1){
-			text = bufferManager.GetText(p);
+			text = bufferManager.readPage(p);
 			stringstream stream;
 			stream << text;
 			stream >> front >> next;
@@ -166,7 +167,7 @@ bool Compare(string a, string b, int comType, int attrType){
 			if (Compare(attr, op.value, op.ope,op.attrType)){
 				if (front != -1){
 					string textf,ne;
-					textf = bufferManager.GetText(front);
+					textf = bufferManager.readPage(front);
 					stringstream stream1;
 					stream1 << next;
 					stream1 >> ne;
@@ -174,22 +175,21 @@ bool Compare(string a, string b, int comType, int attrType){
 					pos1 = textf.find(' ', 0);
 					pos2 = textf.find(' ', pos1+1);
 					textf.replace(pos1, pos2 - pos1, ne);
-					bufferManager.SendText(front, textf);
+					bufferManager.updatePage(front, textf);
 				}
 				if (next != -1){
 					string textn, fr;
-					textn = bufferManager.GetText(next);
+					textn = bufferManager.readPage(next);
 					stringstream stream1;
 					stream1 << front;
 					stream1 >> fr;
 					int pos1, pos2;
 					pos1 = textn.find(' ', 0);
 					textn.replace(0, pos1, fr);
-					bufferManager.SendText(next, textn);
+					bufferManager.updatePage(next, textn);
 				}
 				text = "";
-				bufferManager.SendText(p, text);
-				bufferManager.DeletePage(p);
+				bufferManager.updatePage(p, text);
 			}
 			p = next;
 		}
@@ -199,13 +199,12 @@ bool Compare(string a, string b, int comType, int attrType){
 		int p = page;
 		int front, next;
 		while (p != -1){
-			text = bufferManager.GetText(p);
+			text = bufferManager.readPage(p);
 			stringstream stream;
 			stream << text;
 			stream >> front >> next;
 			text = "";
-			bufferManager.SendText(p, text);
-			bufferManager.DeletePage(p);
+			bufferManager.updatePage(p, text);
 			p = next;
 		}
 	}
@@ -218,8 +217,8 @@ bool Compare(string a, string b, int comType, int attrType){
 		int attrNumber;
 		string attrs[32];
 		while (p != -1){
-			text = bufferManager.GetText(p);
-			bufferManager.SendText(p, text);
+			text = bufferManager.readPage(p);
+			bufferManager.updatePage(p, text);
 			stringstream stream;
 			stream << text;
 			stream >> front >> next;

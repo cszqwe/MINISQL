@@ -6,10 +6,10 @@ using namespace std;
 bool Compare(string a, string b, int comType, int attrType);
 class DataManager{
 public:
-	SavePlace InsertData(int page, int PKplace, int PKType,int attrNum, string*attr){}
-	int DeleteData(int page, OpType op){}
-	int DeleteData(int page){}
-	Error Select(int page, int opNum, OpType *op){}
+	SavePlace InsertData(int page, int PKplace, int PKType, int attrNum, string*attr);
+	int DeleteData(int page, OpType op);
+	int DeleteData(int page);
+	Error Select(int page, int opNum, OpType *op);
 
 };
 #endif

@@ -1,5 +1,13 @@
 #ifndef _INDEXMANAGER_H
 #define _INDEXMANAGER_H
+#include"API.h"
+#include"DataManager.h"
+#include<sstream>
+#include<string>
+#include<iostream>
+#include"IndexManager.h"
+#include "BufferManager.h"
+BufferManager bufferManager("index");
 class IndexManager{
 private:
 	int IndexFind(int page, string value);

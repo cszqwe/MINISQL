@@ -1,0 +1,334 @@
+﻿Build started 2015/10/24 16:56:50.
+     1>Project "C:\Users\sunflower\Documents\MINISQL\Database\Database\Database.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt API.cpp DataManager.cpp IndexManager.cpp
+         IndexManager.cpp
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(14): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(14): error C2228: left of '.GetText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(32): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(32): error C2228: left of '.GetText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(38): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(38): error C2228: left of '.SendText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(50): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(50): error C2228: left of '.GetText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(51): error C2086: 'int nextPage' : redefinition
+                 c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(49) : see declaration of 'nextPage'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(71): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(71): error C2228: left of '.SendText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(76): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(76): error C2228: left of '.NewPage' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(110): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(122): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(127): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(127): error C2228: left of '.NewPage' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(130): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(130): error C2228: left of '.SendText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(138): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(138): error C2228: left of '.SendText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(144): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(144): error C2228: left of '.SendText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(147): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(147): error C2228: left of '.SendText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(159): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(159): error C2228: left of '.GetText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(166): error C2065: 'bufferManger' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(166): error C2228: left of '.GetText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(172): error C2086: 'std::string value' : redefinition
+                 c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(158) : see declaration of 'value'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(177): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(177): error C2228: left of '.GetText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(191): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(191): error C2228: left of '.GetText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(199): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(199): error C2228: left of '.GetText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(218): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(218): error C2228: left of '.GetText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(226): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(226): error C2228: left of '.GetText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(240): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(240): error C2228: left of '.GetText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(245): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(245): error C2228: left of '.GetText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(259): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(259): error C2228: left of '.GetText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(270): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(270): error C2228: left of '.SendText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(276): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(276): error C2228: left of '.GetText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(287): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(287): error C2228: left of '.SendText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(288): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(288): error C2228: left of '.DeletePage' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(294): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(294): error C2228: left of '.GetText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(301): error C2065: 'bufferManger' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(301): error C2228: left of '.GetText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(317): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(317): error C2228: left of '.GetText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(322): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(322): error C2228: left of '.GetText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(327): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(327): error C2228: left of '.SendText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(333): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(333): error C2228: left of '.GetText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(341): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(341): error C2228: left of '.GetText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(358): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(358): error C2228: left of '.GetText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(378): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(378): error C2228: left of '.SendText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(381): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(381): error C2228: left of '.NewPage' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(420): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(420): error C2228: left of '.SendText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(422): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.cpp(422): error C2228: left of '.SendText' must have class/struct/union
+                 type is 'unknown-type'
+         DataManager.cpp
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(87): error C2084: function 'SavePlace DataManager::InsertData(int,int,int,int,std::string *)' already has a body
+                 c:\users\sunflower\documents\minisql\database\database\datamanager.h(9) : see previous definition of 'InsertData'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(96): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(96): error C2228: left of '.NewPage' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(97): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(97): error C2228: left of '.SendText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(107): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(107): error C2228: left of '.GetText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(127): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(127): error C2228: left of '.NewPage' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(128): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(128): error C2228: left of '.SendText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(141): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(141): error C2228: left of '.NewPage' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(142): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(142): error C2228: left of '.SendText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(150): error C2084: function 'int DataManager::DeleteData(int,OpType)' already has a body
+                 c:\users\sunflower\documents\minisql\database\database\datamanager.h(10) : see previous definition of 'DeleteData'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(155): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(155): error C2228: left of '.GetText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(169): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(169): error C2228: left of '.GetText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(177): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(177): error C2228: left of '.SendText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(181): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(181): error C2228: left of '.GetText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(188): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(188): error C2228: left of '.SendText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(191): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(191): error C2228: left of '.SendText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(192): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(192): error C2228: left of '.DeletePage' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(197): error C2084: function 'int DataManager::DeleteData(int)' already has a body
+                 c:\users\sunflower\documents\minisql\database\database\datamanager.h(11) : see previous definition of 'DeleteData'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(202): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(202): error C2228: left of '.GetText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(207): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(207): error C2228: left of '.SendText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(208): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(208): error C2228: left of '.DeletePage' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(212): error C2084: function 'Error DataManager::Select(int,int,OpType *)' already has a body
+                 c:\users\sunflower\documents\minisql\database\database\datamanager.h(12) : see previous definition of 'Select'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(221): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(221): error C2228: left of '.GetText' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(222): error C2065: 'bufferManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.cpp(222): error C2228: left of '.SendText' must have class/struct/union
+                 type is 'unknown-type'
+         API.cpp
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.h(9): error C2146: syntax error : missing ';' before identifier 'InsertData'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.h(9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.h(9): warning C4183: 'InsertData': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.h(10): error C2061: syntax error : identifier 'OpType'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.h(11): error C2535: 'int DataManager::DeleteData(int)' : member function already defined or declared
+                 c:\users\sunflower\documents\minisql\database\database\datamanager.h(10) : see declaration of 'DataManager::DeleteData'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.h(12): error C2146: syntax error : missing ';' before identifier 'Select'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.h(12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.h(12): error C2061: syntax error : identifier 'OpType'
+     1>c:\users\sunflower\documents\minisql\database\database\datamanager.h(12): warning C4183: 'Select': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.h(10): error C2146: syntax error : missing ';' before identifier 'Find'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.h(10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.h(10): error C2061: syntax error : identifier 'OpType'
+     1>c:\users\sunflower\documents\minisql\database\database\indexmanager.h(10): warning C4183: 'Find': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(9): error C2084: function 'Error::Error(void)' already has a body
+                 c:\users\sunflower\documents\minisql\database\database\api.h(15) : see previous definition of '{ctor}'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(10): error C2084: function 'Error::Error(bool,std::string)' already has a body
+                 c:\users\sunflower\documents\minisql\database\database\api.h(16) : see previous definition of '{ctor}'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(18): error C2084: function 'OpType::OpType(int,std::string,int,std::string,int)' already has a body
+                 c:\users\sunflower\documents\minisql\database\database\api.h(32) : see previous definition of '{ctor}'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(28): error C2084: function 'Select::Select(std::string,int,OpType *)' already has a body
+                 c:\users\sunflower\documents\minisql\database\database\api.h(48) : see previous definition of '{ctor}'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(34): error C2084: function 'Error Select::Execute(void)' already has a body
+                 c:\users\sunflower\documents\minisql\database\database\api.h(49) : see previous definition of 'Execute'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(35): error C2264: 'Error::Error' : error in function definition or declaration; function not called
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(39): error C2065: 'catalogManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(39): error C2228: left of '.FindIndexPlace' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(41): error C2065: 'catalogManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(41): error C2228: left of '.AttrType' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(42): error C2660: 'IndexManager::Find' : function does not take 2 arguments
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(45): error C2065: 'catalogManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(45): error C2228: left of '.GetTablePage' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(46): error C2660: 'DataManager::Select' : function does not take 3 arguments
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(51): error C2084: function 'Insert::Insert(std::string,int,std::string *)' already has a body
+                 c:\users\sunflower\documents\minisql\database\database\api.h(57) : see previous definition of '{ctor}'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(57): error C2084: function 'Error Insert::Execute(void)' already has a body
+                 c:\users\sunflower\documents\minisql\database\database\api.h(58) : see previous definition of 'Execute'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(60): error C2264: 'Error::Error' : error in function definition or declaration; function not called
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(63): error C2065: 'catalogManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(63): error C2228: left of '.GetTablePage' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(64): error C2065: 'catalogManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(64): error C2228: left of '.GetPKnum' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(65): error C2065: 'catalogManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(65): error C2228: left of '.GetType' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(66): error C2679: binary '=' : no operator found which takes a right-hand operand of type 'int' (or there is no acceptable conversion)
+                 c:\users\sunflower\documents\minisql\database\database\api.h(10): could be 'SavePlace &SavePlace::operator =(const SavePlace &)'
+                 while trying to match the argument list '(SavePlace, int)'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(67): error C2065: 'catalogManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(67): error C2228: left of '.ChangeFirstPage' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(69): error C2065: 'catalogManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(69): error C2228: left of '.GetIndexName' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(70): error C2065: 'catalogManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(70): error C2228: left of '.GetAttrName' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(74): error C2065: 'catalogManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(74): error C2228: left of '.FindIndexPlace' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(80): error C2084: function 'CreatTable::CreatTable(std::string,int,std::string *,int *)' already has a body
+                 c:\users\sunflower\documents\minisql\database\database\api.h(67) : see previous definition of '{ctor}'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(89): error C2084: function 'Error CreatTable::Execute(void)' already has a body
+                 c:\users\sunflower\documents\minisql\database\database\api.h(68) : see previous definition of 'Execute'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(90): error C2264: 'Error::Error' : error in function definition or declaration; function not called
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(92): error C2065: 'catalogManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(92): error C2228: left of '.NewTable' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(93): error C2065: 'catalogManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(93): error C2228: left of '.GetIndexName' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(97): error C2065: 'catalogManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(97): error C2228: left of '.FindIndexPlace' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(97): error C2228: left of '.ReturnType' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(97): error C2660: 'IndexManager::NewIndex' : function does not take 1 arguments
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(106): error C2084: function 'DropTable::DropTable(std::string)' already has a body
+                 c:\users\sunflower\documents\minisql\database\database\api.h(74) : see previous definition of '{ctor}'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(109): error C2084: function 'Error DropTable::Execute(void)' already has a body
+                 c:\users\sunflower\documents\minisql\database\database\api.h(75) : see previous definition of 'Execute'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(110): error C2264: 'Error::Error' : error in function definition or declaration; function not called
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(113): error C2065: 'catalogManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(113): error C2228: left of '.GetTablePage' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(115): error C2065: 'catalogManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(115): error C2228: left of '.GetIndexName' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(118): error C2065: 'catalogManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(118): error C2228: left of '.FindIndexPlace' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(120): error C2065: 'catalogManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(120): error C2228: left of '.DeleteTable' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(126): error C2084: function 'CreatIndex::CreatIndex(std::string,std::string,std::string)' already has a body
+                 c:\users\sunflower\documents\minisql\database\database\api.h(83) : see previous definition of '{ctor}'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(131): error C2084: function 'Error CreatIndex::Execute(void)' already has a body
+                 c:\users\sunflower\documents\minisql\database\database\api.h(84) : see previous definition of 'Execute'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(132): error C2264: 'Error::Error' : error in function definition or declaration; function not called
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(134): error C2065: 'catalogManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(134): error C2228: left of '.NewIndex' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(135): error C2065: 'catalogManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(135): error C2228: left of '.ReturnType' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(135): error C2660: 'IndexManager::NewIndex' : function does not take 1 arguments
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(140): error C2084: function 'DropIndex::DropIndex(std::string)' already has a body
+                 c:\users\sunflower\documents\minisql\database\database\api.h(90) : see previous definition of '{ctor}'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(143): error C2084: function 'Error DropIndex::Execute(void)' already has a body
+                 c:\users\sunflower\documents\minisql\database\database\api.h(91) : see previous definition of 'Execute'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(144): error C2264: 'Error::Error' : error in function definition or declaration; function not called
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(146): error C2065: 'catalogManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(146): error C2228: left of '.FindIndex' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(148): error C2065: 'catalogManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(148): error C2228: left of '.DeleteIndex' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(154): error C2084: function 'Delete::Delete(std::string,OpType)' already has a body
+                 c:\users\sunflower\documents\minisql\database\database\api.h(99) : see previous definition of '{ctor}'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(159): error C2084: function 'Delete::Delete(std::string)' already has a body
+                 c:\users\sunflower\documents\minisql\database\database\api.h(101) : see previous definition of '{ctor}'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(163): error C2084: function 'Error Delete::Execute(void)' already has a body
+                 c:\users\sunflower\documents\minisql\database\database\api.h(102) : see previous definition of 'Execute'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(164): error C2264: 'Error::Error' : error in function definition or declaration; function not called
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(167): error C2065: 'catalogManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(167): error C2228: left of '.GetTablePage' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(168): error C2660: 'DataManager::DeleteData' : function does not take 2 arguments
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(170): error C2065: 'catalogManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(170): error C2228: left of '.GetIndexName' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(172): error C2065: 'catalogManager' : undeclared identifier
+     1>c:\users\sunflower\documents\minisql\database\database\api.cpp(172): error C2228: left of '.FindIndexPlace' must have class/struct/union
+                 type is 'unknown-type'
+         Generating Code...
+     1>Done Building Project "C:\Users\sunflower\Documents\MINISQL\Database\Database\Database.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:04.57

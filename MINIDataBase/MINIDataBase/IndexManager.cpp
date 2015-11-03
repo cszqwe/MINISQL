@@ -12,7 +12,7 @@ using namespace std;
 		string text,temp;
 		stringstream stream;
 	    
-		text = bufferManager.GetText(page);
+		text = bufferManager.readPage(page);
 		int firstLeaf, isLeaf, attrType, faPage, num, nextPage;
 		stream << text;
 		stream >> isLeaf >> attrType >> faPage >> num ;
@@ -30,13 +30,13 @@ using namespace std;
 		stringstream stream1;
 		string temp;
 		int firstLeaf, isLeaf, attrType, fatherPage, num, nextPage;
-		text = bufferManager.GetText(page);
+		text = bufferManager.readPage(page);
 		stream << text;
 		stream >> isLeaf >> attrType >> fatherPage;
 		stream1 << isLeaf << ' ' << attrType << ' ' << faPage;
 		while (stream >> temp) stream1 << ' ' << temp;
 		getline(stream1, temp);
-		bufferManager.SendText(page, temp);
+		bufferManager.updatePage(page, temp);
 	}
 	void  IndexManager::DeleteMaintain(int page){
 
@@ -48,7 +48,7 @@ using namespace std;
 		string text;
 		string value, temp;
 		int nextPage,firstPage;
-		text = bufferManager.GetText(page);
+		text = bufferManager.readPage(page);
 		int firstLeaf, isLeaf, attrType, faPage, num, nextPage;
 		stream << text;
 		stream >> isLeaf >> attrType >> faPage >> num>>firstPage;
@@ -69,12 +69,12 @@ using namespace std;
 			}
 			if (flag) stream1 << ' ' << attr << ' ' << childPage;
 			getline(stream1, temp);
-			bufferManager.SendText(page, temp);
+			bufferManager.updatePage(page, temp);
 		}
 		else{
 			stringstream stream1;
 			stringstream stream2;
-			int newPage = bufferManager.NewPage();
+			int newPage = bufferManager.newPage();
 			string values[MAX];
 			int nextPages[MAX];
 			int num1, num2, insertPlace = -1;
@@ -125,10 +125,10 @@ using namespace std;
 				}
 			}
 			if (-1 == faPage){
-				int newPage1 = bufferManager.NewPage();
+				int newPage1 = bufferManager.newPage();
 				
 				getline(stream1, temp);
-				bufferManager.SendText(newPage1, temp);
+				bufferManager.updatePage(newPage1, temp);
 				stream1 >> isLeaf >> attrType >> faPage >> num >> firstPage;
 				ChangeFather(firstPage, newPage1);
 				for (int i = 0; i < num; i++){
@@ -136,16 +136,16 @@ using namespace std;
 					ChangeFather(firstPage, newPage1);
 				}
 				getline(stream2, temp);
-				bufferManager.SendText(newPage, temp);
+				bufferManager.updatePage(newPage, temp);
 				ChangeFather(newPage, page);
 				ChangeFather(newPage1, page);
 				return;
 			}
 			getline(stream1, temp);
-			bufferManager.SendText(page, temp);
+			bufferManager.updatePage(page, temp);
 			getline(stream2, temp);
 
-			bufferManager.SendText(newPage, temp);
+			bufferManager.updatePage(newPage, temp);
 
 			InsertMaintain(faPage, attribute, newPage);
 		}
@@ -157,14 +157,14 @@ using namespace std;
 			stringstream stream1;
 			string text;
 			string value;
-			text = bufferManager.GetText(page);
+			text = bufferManager.readPage(page);
 			int firstLeaf, isLeaf, attrType, faPage, num, nextPage;
 			stream1 << text;
 			stream1 >> isLeaf >> attrType >> faPage >> num >> nextPage;
 			while (!(isLeaf)){
 				stream1.clear();
 				stream1.str("");
-				text = bufferManger.GetText(nextPage);
+				text = bufferManager.readPage(nextPage);
 				firstLeaf = nextPage;
 				stream1 << text;
 				stream1 >> isLeaf >> attrType >> faPage >> num >> nextPage;
@@ -175,7 +175,7 @@ using namespace std;
 			int front, next, attrNumber;
 			while (nowLeaf != aimPage){
 				for (int i = 0; i < num; i++){
-					text = bufferManager.GetText(nextPage);
+					text = bufferManager.readPage(nextPage);
 					stringstream stream;
 					stream << text;
 					stream >> front >> next;
@@ -189,7 +189,7 @@ using namespace std;
 				nowLeaf = nextPage;
 				stream1.clear();
 				stream1.str("");
-				text = bufferManager.GetText(nowLeaf);
+				text = bufferManager.readPage(nowLeaf);
 				stream1 << text;
 				stream1 >> isLeaf >> attrType >> faPage >> num >> nextPage;
 			}
@@ -197,7 +197,7 @@ using namespace std;
 			for (int i = 0; i < num; i++){
 				stream1 >> value >> nextValue;
 				if (Compare(value, op.value, op.ope, attrType)){
-						text = bufferManager.GetText(nowValue);
+						text = bufferManager.readPage(nowValue);
 						stringstream stream;
 						stream << text;
 						stream >> front >> next;
@@ -216,7 +216,7 @@ using namespace std;
 			string value;
 			string attrs[32];
 			int front, next, attrNumber,nowLeaf;
-			text = bufferManager.GetText(aimPage);
+			text = bufferManager.readPage(aimPage);
 			int firstLeaf, isLeaf, attrType, faPage, num, nextPage;
 			stream1 << text;
 			stream1 >> isLeaf >> attrType >> faPage >> num >> nextPage;
@@ -224,7 +224,7 @@ using namespace std;
 			for (int i = 0; i < num; i++){
 				stream1 >> value >> nextValue;
 				if (Compare(value, op.value, op.ope, attrType)){
-					text = bufferManager.GetText(nowValue);
+					text = bufferManager.readPage(nowValue);
 					stringstream stream;
 					stream << text;
 					stream >> front >> next;
@@ -238,12 +238,12 @@ using namespace std;
 			}
 
 			nowLeaf = nowValue;//输出后面的
-			text = bufferManager.GetText(nowLeaf);
+			text = bufferManager.readPage(nowLeaf);
 			stream1 << text;
 			stream1 >> isLeaf >> attrType >> faPage >> num >> nextPage;
 			while (nowLeaf != -1){
 				for (int i = 0; i < num; i++){
-					text = bufferManager.GetText(nextPage);
+					text = bufferManager.readPage(nextPage);
 					stringstream stream;
 					stream << text;
 					stream >> front >> next;
@@ -257,7 +257,7 @@ using namespace std;
 				nowLeaf = nextPage;
 				stream1.clear();
 				stream1.str("");
-				text = bufferManager.GetText(nowLeaf);
+				text = bufferManager.readPage(nowLeaf);
 				stream1 << text;
 				stream1 >> isLeaf >> attrType >> faPage >> num >> nextPage;
 			}
@@ -268,13 +268,13 @@ using namespace std;
 		string text;
 		stream << 1<<' '<<indexType<<' '<<-1<<' '<<0<<' '<<-1;
 		getline(stream, text);
-		bufferManager.SendText(page, text);
+		bufferManager.updatePage(page, text);
 	}
 	void  IndexManager::DeleteIndex(int page){
 		stringstream stream;
 		string text,content;
 		int isLeaf, attrType,faPage,num,nextPage;
-		text = bufferManager.GetText(page);
+		text = bufferManager.readPage(page);
 		stream << text;
 		stream >> isLeaf >> attrType >> faPage >> num>>nextPage;
 		if (!(isLeaf))
@@ -285,21 +285,21 @@ using namespace std;
 				DeleteIndex(nextPage);
 			}
 		}
-		bufferManager.SendText(page, "");
-		bufferManager.DeletePage(page);
+		bufferManager.updatePage(page, "");
+		//bufferManager.DeletePage(page);
 	}
 	void  IndexManager::Maintain(int page){
 		stringstream stream1;
 		string text;
 		string value;
-		text=bufferManager.GetText(page);
+		text=bufferManager.readPage(page);
 		int firstLeaf,isLeaf, attrType, faPage, num, nextPage;
 		stream1 << text;
 		stream1 >> isLeaf >> attrType >> faPage >> num >> nextPage;
 		while (!(isLeaf)){
 			stream1.clear();
 			stream1.str("");
-			text = bufferManger.GetText(nextPage);
+			text = bufferManager.readPage(nextPage);
 			firstLeaf = nextPage;
 			stream1 << text;
 			stream1 >> isLeaf >> attrType >> faPage >> num >> nextPage;
@@ -315,23 +315,23 @@ using namespace std;
 			stream2 << isLeaf << ' ' << attrType << ' ' << faPage << ' ';
 			for (int i = 0; i < num; i++){
 				Pages[i] = nextPage;
-				if (!bufferManager.GetText(nextPage)) newNum--;
+				if (!bufferManager.readPage(nextPage)) newNum--;
 				stream1 >> value[i] >> nextPage;
 			}
 			stream2 << newNum;
 			for (int i = 0; i < num; i++){
-				if (bufferManager.GetText(Pages[i]))
+				if (bufferManager.readPage(Pages[i]))
 					stream2 << ' ' << Pages[i] << ' ' << values[i];
 			}
 			stream2 << ' ' << nextPage;
 			getline(stream2, temp);
-			bufferManager.SendText(nowLeaf, temp);
+			bufferManager.updatePage(nowLeaf, temp);
 			nowLeaf = nextPage;
 			if (-1 != nowLeaf)
 			{
 				stream1.clear();
 				stream1.str("");
-				text = bufferManager.GetText(nowLeaf);
+				text = bufferManager.readPage(nowLeaf);
 				stream1 << text;
 				stream1 >> isLeaf >> attrType >> faPage >> num >> nextPage;
 			}
@@ -339,7 +339,8 @@ using namespace std;
 		nowLeaf = firstLeaf;
 		while (-1 != nowLeaf){//维护已经删除后的叶节点
 			DeleteMaintain(nowLeaf);
-			string temp = bufferManager.GetText(nowLeaf);
+			string temp;
+			temp=bufferManager.readPage(nowLeaf);
 			stringstream stream2;
 			stream2 << temp;
 			stream2 >> isLeaf >> attrType >> faPage >> num >> nextPage;
@@ -356,7 +357,7 @@ using namespace std;
 		bool flag = true;
 		string temp;
 		string values[MAX];
-		text = bufferManager.GetText(page);
+		text = bufferManager.readPage(page);
 		stream << text;
 		stream>> isLeaf >> attrType >> faPage >> num;
 		for (int i = 0; i < num; i++)
@@ -376,10 +377,10 @@ using namespace std;
 			stream >> nextPage;
 			stream2 << ' ' << nextPage;
 			getline(stream2, temp);
-			bufferManager.SendText(aimPage, temp);
+			bufferManager.updatePage(aimPage, temp);
 		}
 		else {
-			int newPage = bufferManager.NewPage();
+			int newPage = bufferManager.newPage();
 			stringstream stream1, stream2;
 			int num1 = 0, num2 = 0, insertPlace=-1;
 			stream1 << isLeaf << ' ' << attrType << ' ' << faPage << ' ';
@@ -418,9 +419,9 @@ using namespace std;
 			stream >> nextPage;
 			stream2 << ' ' << nextPage;
 			getline(stream1, temp);
-			bufferManager.SendText(aimPage, temp);
+			bufferManager.updatePage(aimPage, temp);
 			getline(stream2, temp);
-			bufferManager.SendText(newPage, temp);
+			bufferManager.updatePage(newPage, temp);
 			InsertMaintain(faPage, attribute, newPage);
 		}
 	}
